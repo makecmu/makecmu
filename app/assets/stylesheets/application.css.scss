@@ -8,17 +8,14 @@
 
 html {
     background: url("background.jpg");
-    font: 13px "Helvetica Neue", arial, helvetica, sans-serif;
 }
 
 body {
+    font: 20px "Helvetica Neue", arial, helvetica, sans-serif;
+    line-height: 30px;
+    color: #474747;
 }
 
-section {
-    margin: 0 auto;
-    width: 900px;
-}
-
-#participate {
-    background: blue;
+h1, h2, h3, h4, h5 {
+    color: black;
 }
