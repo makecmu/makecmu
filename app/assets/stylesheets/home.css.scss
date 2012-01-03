@@ -1,3 +1,19 @@
+::-moz-selection { background: #78c7ef; }
+::selection { background: #78c7ef; }
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+#intro h3 {
+    font-style: italic;
+    font-family: serif;
+}
+
 header {
     font-size: 12px;
     width: 900px;
@@ -5,22 +21,23 @@ header {
 }
 header nav {
     float:right;
+    color: black;
+    text-transform: uppercase;
 }
 header  nav ul li {
     float:left;
-    margin-left: 80px;
+    width: 120px;
+    text-align: right;
+    letter-spacing: 1px;
     font-weight: bold;
 }
 
 header .blurb {
     float:left;
-    background: #373737;
-/*    position:relative;
-    right: 55%;
-    min-width: 495px;*/
+    background: #474747;
     text-align: right;
     color: white;
-    padding: 7px 50px 7px 9999px;
+    padding: 9px 50px 9px 9999px;
     line-height: 12px;
     margin-left: -9999px;
 }
@@ -41,8 +58,12 @@ em{
 }
 
 section.alternate {
-    background: #0D2330;
+    background: #123A4C;
     box-shadow: inset #07121a 0 0 10px;
+    color: white;
+}
+
+.alternate a {
     color: white;
 }
 
@@ -147,7 +168,6 @@ section.alternate {
 #subscribe-box .submit:active {
         background: #2084c7;
         background: -webkit-gradient(linear, 0% 0%, 0% 100%, to(#4bbef4), from(#259eee));
-        text-shadow: #444 0 1px;
 }
 
 #venn-diagram {
@@ -165,12 +185,6 @@ h1 {
     margin: 10px 0;
     font-size: 60px;
     line-height: 60px;
-}
-
-// TODO: remove
-h3 {
-    font-family: serif;
-    font-style: italic;
 }
 
 .section-arrow {
@@ -221,7 +235,10 @@ h3 {
     font-weight: bold;
     border: 0;
     border-top: solid 1.5px white;
+    
+    background: #C5C5C5;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d2d2d2), to(#b7b7b7));
+    
     box-shadow: #777 0 2px 5px;
     position: relative;
     
@@ -232,7 +249,6 @@ h3 {
 .button:active {
     background: #AAA;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, to(#d2d2d2), from(#b7b7b7));
-    text-shadow: #FFF 0 -1px;
 }
 
 /* For glow */
@@ -247,7 +263,58 @@ h3 {
     border-radius: 6px;
     z-index: -1;
     
+    background: #C5C5C5;
     box-shadow: #999 0 0 1px;
+}
+
+.project {
+    font-size: 12px;
+    line-height: 24px;
+    width: 450px;
+    float:left;
+}
+
+.project:nth-child(1) .project-container {
+    margin-left: 0;
+}
+
+.project h3 {
+    font-size: 20px;
+    color: #ed5252;
+}
+
+.project-container ul {
+    list-style: none inside;
+    padding: 0;
+}
+
+.project-container {
+    float: left;
+    background: #EDEDED;
+    width: 220px;
+    box-shadow: #777 0 2px 5px;
+    padding: 15px;
+    margin: 0 20px;
+}
+
+.project-img {
+    background: white;
+    box-shadow: inset #777 0 2px 5px;
+}
+
+.inset-button {
+    color: black;
+    padding: 2% 6%;
+    border-radius: 9999px;
+    border-top: solid 1px #555;
+    box-shadow: white 0 -1px;
+    background: #C5C5C5;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#c8c8c8), to(#b7b7b7));
+    text-shadow: #FFF 0 1px;
+    font-weight: bold;
+}
+.inset-button:active {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, to(#c8c8c8), from(#b7b7b7));
 }
 
 .top-link {
@@ -268,4 +335,8 @@ footer {
     background: #1d1d1d;
     color: white;
     min-height: 200px;
+}
+
+.project .button {
+    padding: 5px 15px;
 }
