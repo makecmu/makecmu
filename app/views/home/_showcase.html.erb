@@ -1,0 +1,14 @@
+<section id="showcase">
+  <div class="content">
+    <a href="#top" class="top-link">Top</a>
+  	<h1>SHOWCASE</h1>
+  	<h3>View and join existing MakeCMU projects</h3>
+	
+    <%= render :partial => "submit_arrow" %>
+
+    <div class="projects">
+      <%= render :partial => "project", :collection => @projects %>
+    </div>
+
+  </div>
+</section>

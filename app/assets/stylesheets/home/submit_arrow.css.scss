@@ -1,0 +1,42 @@
+.section-arrow {
+    height: 70px;
+    line-height: 70px;
+    background: rgb(239,81,86);
+    
+    width: 555px;
+    padding-left: 9999px;
+    margin-left: -9999px;
+    position: relative;
+
+    float: left;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    color: white;
+}
+
+.section-arrow:before {
+    content: " ";
+    display:block;
+    border: solid transparent 65px;
+    border-color: transparent transparent transparent #ED5252;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    margin: -30px -130px 0 0;
+    z-index: -1;
+}
+
+.arrow-right {
+    margin-top: 35px;
+    float: right;
+}
+
+#submit-idea {
+    font-size: 25px;
+    line-height: 0;
+    padding: 30px;
+    height: 60px;
+}

@@ -1,0 +1,32 @@
+#action-links {
+    list-style-type: none;
+    padding: 0;
+    text-align:center;
+    margin-bottom: 80px;
+}
+#action-links li {
+    display:inline-block;
+    margin: 0 10px;
+    width: 250px;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#action-links li a {
+    display:inline-block;
+    
+    color: #77C9ED;
+    text-decoration: none;
+    
+    padding-top: 130px; /* make room for images */
+}
+
+#action-links .brainstorm {
+    background-image: url(../lightbulb.png);
+}
+#action-links .attend {
+    background-image: url(../people.png);
+}
+#action-links .subscribe {
+    background-image: url(../letter.png);
+}

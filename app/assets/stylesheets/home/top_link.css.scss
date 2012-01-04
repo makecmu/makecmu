@@ -1,0 +1,13 @@
+.top-link {
+    float: right;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+.top-link:after {
+    content: "↑";
+    font-size: 12px;
+    vertical-align: 2px;
+    margin-left: 10px;
+}

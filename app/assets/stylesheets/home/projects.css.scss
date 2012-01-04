@@ -1,0 +1,75 @@
+.projects {
+    clear:both;
+    overflow:auto;
+
+    // (so that the drop shadows render)
+    padding: 5px;
+    margin: -5px;
+}
+
+/////////////////////////
+
+.project {
+    font-size: 12px;
+    line-height: 24px;
+    width: 450px;
+    float:left;
+    margin-top: 30px;
+}
+
+.project:nth-child(odd) .project-container {
+    margin-left: 0;
+}
+
+.project h3 {
+    font-size: 20px;
+    color: #ed5252;
+    font-weight: normal;
+
+    margin: 12px 0 0 0;
+}
+
+.project h4 {
+    font-weight: normal;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.project h5 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.project-description {
+    margin-top: 2em;
+}
+
+.project-container ul {
+    list-style: none inside;
+    padding: 0;
+    margin-top: 0;
+}
+
+.project-container {
+    float: left;
+    background: #EDEDED;
+    width: 200px;
+    border-top: solid rgb(218,218,218) 1px;
+    box-shadow: #777 0 2px 5px;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.project-img {
+    background: white;
+    box-shadow: inset #777 0 2px 5px;
+
+    width: 200px;
+    height: 170px;
+}
+
+.join-button {
+    font-size: 13px;
+    padding: 5px 18px;
+}
