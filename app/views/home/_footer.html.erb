@@ -4,16 +4,16 @@
       <h3><%= image_tag "connect_with_us.png", :alt => "Connect with us" %></h3>
       <ul class="connect-links">
         <li>
-          <a href="http://www.twitter.com/makecmu">
+          <%= link_to LINKS[:twitter] do %>
             <%= image_tag "twitter.png", :alt => "Twitter" %>
             <span>Twitter</span>
-          </a>
+          <% end %>
         </li>
         <li>
-          <a href="https://www.facebook.com/makecmu">
+          <%= link_to LINKS[:facebook] do %>
             <%= image_tag "facebook.png", :alt => "Facebook" %>
             <span>Facebook</span>
-          </a>
+          <% end %>
         </li>
       </ul>
     </section>
