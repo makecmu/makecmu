@@ -1,6 +1,58 @@
-footer {
+body > footer {
     padding: 40px 0;
     background: #1d1d1d;
     color: white;
     min-height: 200px;
+    font-size: 18px;
+}
+
+body > footer h3 {
+	color: white;
+}
+
+body > footer a, body > footer a:visited {
+	color: #7bcbf4;
+}
+
+body > footer section {
+	float:left;
+	width: 50%;
+}
+
+body > footer h3 {
+	margin: 0;
+}
+
+body > footer ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+body > footer .footer-credits {
+	clear:both;
+	text-align:center;
+	font-size: 12px;
+}
+
+.connect-links {
+	font-size: 20px;
+}
+
+.connect-links li a, .connect-links li a:visited {
+	color: white;
+}
+
+.connect-links li a {
+	display: block;
+	height: 45px;
+	width: 150px;
+	line-height: 45px;
+}
+
+.connect-links li {
+	margin-bottom: 15px;
+}
+
+.connect-links li span {
+	margin-left: 5px;
 }

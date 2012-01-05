@@ -1,13 +1,28 @@
 <footer>
   <div class="content">
-    <h3>
-    	<%= image_tag "facebook.png", :alt => "Facebook" %>
-    	<span>Connect with us</span>
-    <h3>
-    <h3>Questions/Comments?</h3>
-    <p>Just <a href="mailto:">email us</a> and we&rsqo;ll respond as fast as possible
+    <section>
+      <h3><%= image_tag "connect_with_us.png", :alt => "Connect with us" %></h3>
+      <ul class="connect-links">
+        <li>
+          <a href="#">
+            <%= image_tag "twitter.png", :alt => "Twitter" %>
+            <span>Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <%= image_tag "facebook.png", :alt => "Facebook" %>
+            <span>Facebook</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h3><%= image_tag "questions_comments.png", :alt => "Questions/Comments?" %></h3>
+      <p>Just <a href="mailto:">email us</a> and we&rsquo;ll respond as fast as possible!</p>
+    </section>
+    <p class="footer-credits">
+    	Website designed by <a href="#a">Linda Dong</a>. Logo by <a href="#b">Maya Irvine</a>. Some icons by <a href="#c">brsev</a>.
+    </p>
   </div>
-  <small>
-  	Website designed by <a href="#">Linda Dong</a>. Logo by <a href="#">Maya Irvine</a>. Some icons by <a href="#">brsev</a>.
-  </small>
 </footer>

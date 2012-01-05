@@ -8,12 +8,15 @@ header nav {
     color: black;
     text-transform: uppercase;
 }
-header  nav ul li {
+header nav ul li {
     float:left;
     width: 120px;
     text-align: right;
     letter-spacing: 1px;
     font-weight: bold;
+}
+header nav a:hover {
+    text-decoration: underline;
 }
 
 header .blurb {
