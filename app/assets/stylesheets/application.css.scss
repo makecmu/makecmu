@@ -2,6 +2,7 @@
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
+
  *= require_tree . 
  *= require_self
 */
@@ -14,6 +15,8 @@ body {
     font: 20px "Helvetica Neue", arial, helvetica, sans-serif;
     line-height: 30px;
     color: #474747;
+
+    padding-top: 30px;
 }
 
 h1, h2, h3, h4, h5 {

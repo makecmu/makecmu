@@ -17,9 +17,10 @@
     
     // Highlight
     border-top: solid 1.5px #d3effc;
-    
+
     box-shadow: #08141d 0 2px 5px;
 }
+
 #subscribe-box .email {
     display:block;
     border: 0;
@@ -40,6 +41,10 @@
     box-shadow: #94D1F7 0 1px;
     
     border-radius: 6px;
+}
+
+#subscribe-box .email:focus {
+    outline: none;
 }
 
 #subscribe-box .submit {
