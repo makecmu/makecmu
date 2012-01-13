@@ -1,5 +1,8 @@
 $(document).ready ->
 
+	$.localScroll(duration: 500)
+
+
 	$('.subscribe-link').click (event) ->
 		$('#subscribe-email').focus()
 
@@ -9,4 +12,4 @@ $(document).ready ->
 						   .animate({width:old   }, 100)
 
 		event.preventDefault()
-		false
+		event.stopPropogation()
