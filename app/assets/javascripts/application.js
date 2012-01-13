@@ -6,6 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.scrollTo.js
-//= require jquery.localscroll.js
+//= require jquery.scrollTo
+//= require jquery.localscroll
+//= require jquery.colorbox
 //= require_tree .
