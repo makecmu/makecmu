@@ -1,4 +1,4 @@
-$(window).ready ->
+$(document).ready ->
 
 	$('.subscribe-link').click (event) ->
 		$('#subscribe-email').focus()

@@ -1,0 +1,22 @@
+#maps {
+	position: absolute;
+	right:0;
+	left: 500px;
+	top: 0; bottom: 0;
+
+	box-shadow: black 0 0 10px;
+
+	padding: 0; // HACK
+}
+
+#google-map, #cfa-map, #cfa-pic {
+	height: 20%;
+}
+
+#cfa-map {
+	background: #220 url('http://farm4.staticflickr.com/3636/3522712235_e94e5238d5.jpg') no-repeat left top;
+}
+
+#cfa-pic {
+	background: #220 url('http://farm5.staticflickr.com/4043/4407144894_11a7d0fe37_z.jpg') no-repeat center top;
+}
