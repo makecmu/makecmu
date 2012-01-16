@@ -1,7 +1,7 @@
 <div class="project">
   <div class="project-container">
-    <%= link_to project do %>
-      <img src="" class="project-img">
+    <%= link_to project, :class => "modal" do %>
+      <%= image_tag project.image.url, :alt => project.title, :class => "project-img" %>
     <% end %>
     <h4>Looking For:</h4>
     <ul>
@@ -12,7 +12,7 @@
     <a href="" class="inset-button join-button">Join this project</a>
   </div>
 
-  <h3><%= link_to project.title, project %></h3>
+  <h3><%= link_to project.title, project, :class => "modal" %></h3>
   <h5><%= project.author %></h5>
   <div class="project-description"><%= project.description %></div>  
 </div>
