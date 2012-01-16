@@ -2,8 +2,10 @@ $(document).ready ->
 
 	$.localScroll(duration: 500)
 
-	$('.modal').colorbox(iframe:true, width:"80%", height:"80%", transition:"fade");
+	$('.modal').colorbox(iframe:true, width:"60%", height: "50%", transition:"fade", fastIframe:false);
 
+
+	$('.subscribe-link').unbind('click')
 	$('.subscribe-link').click (event) ->
 		$('#subscribe-email').focus()
 
