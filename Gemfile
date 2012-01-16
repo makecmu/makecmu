@@ -2,6 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 
+gem 'mongoid', '2.4.1'
+gem 'bson_ext'
+
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'

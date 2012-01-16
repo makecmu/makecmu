@@ -1,24 +1,18 @@
 <div class="project">
   <div class="project-container">
-    <a href="#">
+    <%= link_to project do %>
       <img src="" class="project-img">
-    </a>
-    <h4>People wanted:</h4>
+    <% end %>
+    <h4>Looking For:</h4>
     <ul>
-      <li>Designer</li>
-      <li>Developer</li>
-      <li>Business-person</li>
+      <% project.looking_for.each do |need| %>
+      <li><%= need %></li>
+      <% end %>
     </ul>
-    <a href="" class="inset-button join-button">
-      Join this project
-    </a>
+    <a href="" class="inset-button join-button">Join this project</a>
   </div>
 
-  <h3><a href="#">Project Title</a></h3>
-  <h5>Author</h5>
-  <div class="project-description">
-    This is an awesome idea where we're trying to get
-    awesome people to do awesome things together. In the
-    end we want to create the next generation of great stuff
-  </div>  
+  <h3><%= link_to project.title, project %></h3>
+  <h5><%= project.author %></h5>
+  <div class="project-description"><%= project.description %></div>  
 </div>
