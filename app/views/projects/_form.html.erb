@@ -25,8 +25,8 @@
   </div>
   <div class="field">
     <%= f.label :looking_for %><br />
-    <% (0..2).each do |i| %>
-      <%= f.text_field :looking_for, :index => i %><br />
+    <% 3.times do %>
+      <input name="project[looking_for][]" type="text"><br />
     <% end %>
   </div>
   <div class="field">
