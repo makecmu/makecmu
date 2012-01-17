@@ -9,7 +9,7 @@
       <li><%= need %></li>
       <% end %>
     </ul>
-    <a href="" class="inset-button join-button">Join this project</a>
+    <%= link_to "Join This Project", new_project_membership_path(project), :class => "inset-button join-button modal" %>
   </div>
 
   <h3><%= link_to project.title, project, :class => "modal" %></h3>

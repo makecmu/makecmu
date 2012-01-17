@@ -1,6 +1,8 @@
 class Project
   include Mongoid::Document
 
+  key :title
+
   field :title, :type => String
   field :author, :type => String
   field :description, :type => String
@@ -11,5 +13,5 @@ class Project
 
   mount_uploader :image, ImageUploader
 
-  key :title
+  embeds_many :memberships
 end
