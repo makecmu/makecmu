@@ -8,6 +8,8 @@ class Project
   field :description, :type => String
   field :looking_for, :type => Array
 
+  belongs_to :user
+
   validates_uniqueness_of :title
   validates_presence_of :title, :author, :description, :looking_for, :image
 
