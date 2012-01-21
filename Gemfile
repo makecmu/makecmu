@@ -5,6 +5,10 @@ gem 'rails', '~> 3.1.1'
 gem 'mongoid', '~> 2.4.1'
 gem 'bson_ext'
 
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'cancan'
+
 gem 'carrierwave', '~> 0.5.8'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'rmagick'
