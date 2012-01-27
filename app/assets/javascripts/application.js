@@ -8,5 +8,4 @@
 //= require jquery_ujs
 //= require jquery.scrollTo
 //= require jquery.localscroll
-//= require jquery.colorbox
 //= require_tree .
