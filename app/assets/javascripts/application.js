@@ -8,4 +8,5 @@
 //= require jquery_ujs
 //= require jquery.scrollTo
 //= require jquery.localscroll
+//= require jquery.fancybox
 //= require_tree .

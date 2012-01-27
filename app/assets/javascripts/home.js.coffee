@@ -2,6 +2,19 @@ $(document).ready ->
 
 	$.localScroll(duration: 500)
 
+	$('.modal').fancybox(
+		type		: 'ajax'
+		minWidth	: 800,
+		minHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	)
+
 	$('.subscribe-link').unbind('click')
 	$('.subscribe-link').click (event) ->
 		$('#subscribe-email').focus()
