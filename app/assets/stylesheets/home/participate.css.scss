@@ -22,13 +22,13 @@
 }
 
 #action-links .brainstorm {
-    background-image: url(../lightbulb.png);
+    background-image: url(image-path("lightbulb.png"));
 }
 #action-links .attend {
-    background-image: url(../people.png);
+    background-image: url(image-path("people.png"));
 }
 #action-links .subscribe {
-    background-image: url(../letter.png);
+    background-image: url(image-path("letter.png"));
 }
 
 ::-webkit-input-placeholder, ::-moz-placeholder {
