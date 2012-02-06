@@ -3,6 +3,8 @@
  *= require_tree ./home/
  */
 
+@import "compass/css3";
+
 ::-moz-selection { background: #78c7ef; }
 ::selection { background: #78c7ef; }
 
@@ -30,7 +32,7 @@ body section:nth-child(2) {
 
 section.alternate {
     background: rgb(14,35,49);
-    box-shadow: inset #07121a 0 0 10px;
+    @include box-shadow(inset #07121a 0 0 10px);
     color: white;
 }
 

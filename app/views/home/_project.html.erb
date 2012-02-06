@@ -1,7 +1,7 @@
 <div class="project">
   <div class="project-container">
     <%= link_to project, :class => "modal" do %>
-      <%= image_tag project.image.url, :alt => project.title, :class => "project-img" %>
+      <%= image_tag project.image.thumb.url, :alt => project.title, :class => "project-img", :width => 200, :height => 170 %>
     <% end %>
     <h4>Looking For:</h4>
     <ul>

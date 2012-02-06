@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 .projects {
     clear:both;
     overflow:auto;
@@ -49,6 +51,8 @@
     list-style: none inside;
     padding: 0;
     margin-top: 0;
+
+    min-height: 72px; // To align
 }
 
 .project-container {
@@ -56,15 +60,16 @@
     background: #EDEDED;
     width: 200px;
     border-top: solid rgb(218,218,218) 1px;
-    box-shadow: #777 0 2px 5px;
+    @include box-shadow(#777 0 2px 5px);
     padding: 10px;
     margin: 0 20px;
 }
 
 .project-img {
     background: white;
-    box-shadow: inset #777 0 2px 5px;
+    @include box-shadow(inset #777 0 2px 5px);
 
+    display: block;
     width: 200px;
     height: 170px;
 }
@@ -72,8 +77,4 @@
 .join-button {
     font-size: 13px;
     padding: 5px 18px;
-}
-
-.join-button:hover {
-    text-decoration: none;
 }
