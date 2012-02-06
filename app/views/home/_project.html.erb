@@ -14,5 +14,5 @@
 
   <h3><%= link_to project.title, project, :class => "modal" %></h3>
   <h5><%= project.author %></h5>
-  <div class="project-description"><%= project.description %></div>  
+  <div class="project-description"><%= simple_format truncate(project.description, :length => 250, :omission => link_to(raw(' &hellip;'), project, :class=>"modal") ) %></div>  
 </div>
