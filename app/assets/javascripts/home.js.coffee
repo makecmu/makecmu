@@ -6,6 +6,7 @@ $(document).ready ->
 		type		: 'ajax'
 		minWidth	: 800,
 		minHeight	: 600,
+		padding		: 0,
 		fitToView	: false,
 		autoSize	: false,
 		closeClick	: false,
