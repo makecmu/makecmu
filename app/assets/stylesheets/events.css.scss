@@ -1,19 +1,24 @@
-#maps {
-	position: absolute;
-	right:0;
-	left: 60%;
-	top: 60px; bottom: 0;
+@import "compass/css3";
 
-	padding: 0; // HACK
-	min-height: 0; // HACK
+#supplemental-info {
+	position: absolute;
+	right: 20px;
+	left: 60%;
+	top: 80px; bottom: 0;
+
+	padding-right: 0; // HACK: override
+	min-height: 0; // HACK: override
 }
 
 #next-meeting-title {
 	font-size: 36px;
 	margin: 0;
-	padding: 0 15px;
+	padding: 5px 15px;
 	height: 60px;
 	line-height: 60px;
+
+	background: #DDD;
+	@include box-shadow(inset #AAA 0 -5px 5px)
 }
 
 #meeting-info {
@@ -24,7 +29,14 @@
 
 	position: absolute;
 	left: 0; right: 40%;
-	top: 60px; bottom: 60px;
+	top: 80px; bottom: 60px;
+}
+
+
+#meeting-info dt {
+	font-weight: bold;
+	float: left;
+	width: 80px;
 }
 
 #links {
