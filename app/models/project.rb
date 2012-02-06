@@ -1,7 +1,7 @@
 class Project
   include Mongoid::Document
 
-  key :title
+  key :id, :title
 
   field :title, :type => String
   field :author, :type => String
@@ -10,7 +10,6 @@ class Project
 
   belongs_to :user
 
-  validates_uniqueness_of :title
   validates_presence_of :title, :author, :description, :looking_for, :image
 
   mount_uploader :image, ImageUploader
