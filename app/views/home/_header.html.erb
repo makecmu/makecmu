@@ -3,6 +3,9 @@
   <nav>
     <ul>
       <!-- <li><a href="#">About Us</a></li> -->
+      <% unless params[:controller] == 'home' %>
+	      <li><%= link_to "Home", root_url %></li>
+      <% end %>
       <li><%= link_to "Twitter", LINKS[:twitter] %></li>
       <li><%= link_to "Facebook", LINKS[:facebook] %></li>
     </ul>
