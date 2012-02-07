@@ -7,6 +7,8 @@ class Membership
   field :interests, :type => String
   field :comments, :type => String
 
+  validates_presence_of :name, :email
+
   embedded_in :project
 
   def self.to_csv(memberships, col_sep = "")

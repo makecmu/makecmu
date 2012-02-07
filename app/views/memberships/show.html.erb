@@ -1,25 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @membership.name %>
+<p style="text-align:center"><!--HACK-->
+<%= image_tag "mission_accomplished.jpg"%>
 </p>
 
 <p>
-  <b>Email:</b>
-  <%= @membership.email %>
+Thanks, <%= @membership.name %>. <%= link_to @project.user.name, @project.user.link %> has been notified of your interest in <%= link_to @project.title, @project %>.
 </p>
-
-<p>
-  <b>Interests:</b>
-  <%= @membership.interests %>
-</p>
-
-<p>
-  <b>Comments:</b>
-  <%= @membership.comments %>
-</p>
-
-
-<%#= link_to 'Edit', edit_membership_path([@project, @membership]) %> |
-<%#= link_to 'Back', memberships_path(@project) %>
