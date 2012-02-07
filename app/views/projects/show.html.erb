@@ -4,27 +4,26 @@
 </h1>
 
 <p>
-  <b>Title:</b>
-  <%= @project.title %>
+<%= link_to @project.user.link do %>
+	<%= image_tag @project.user.image_url %>
+	<%=@project.user.name%>
+<% end %>
 </p>
 
 <p>
-  <b>Author:</b>
-  <%= @project.author %>
+<%= @project.description %>
 </p>
 
-<p>
-  <b>Description:</b>
-  <%= @project.description %>
-</p>
+<h4>Looking For:</h4>
+<ul>
+  <% @project.looking_for.each do |need| %>
+  <li><%= need %></li>
+  <% end %>
+</ul>
 
-<p>
-  <b>Looking for:</b>
-  <%= @project.looking_for %>
-</p>
+<h4>Updated:</h4>
+<%= l @project.updated_at, :format => :long %>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
 <% if can? :manage, @project %>
 	<h4>Interested People <%= link_to '[CSV]', project_memberships_url(@project, :format => :csv)%></h4>
 	<table border="1">
@@ -44,3 +43,4 @@
 		<% end %>
 	</table>
 <% end %>
+<%= link_to "Join This Project", new_project_membership_path(@project), :class => "inset-button join-button modal" unless can? :manage, @project %>
