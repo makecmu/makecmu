@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<h1>
+	<%= @project.title %>
+	<%= link_to ' [Edit]', edit_project_path(@project) if can? :edit, @project %>
+</h1>
 
 <p>
   <b>Title:</b>
@@ -22,3 +25,22 @@
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+<% if can? :manage, @project %>
+	<h4>Interested People <%= link_to '[CSV]', project_memberships_url(@project, :format => :csv)%></h4>
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<th>E-Mail</th>
+			<th>Interests</th>
+			<th>Comments</th>
+		</tr>		
+		<% @project.memberships.each do |membership| %>
+			<tr>
+				<td><%= membership.name %></td>
+				<td><%= membership.email %></td>
+				<td><%= membership.interests %></td>
+				<td><%= membership.comments %></td>
+			</tr>
+		<% end %>
+	</table>
+<% end %>

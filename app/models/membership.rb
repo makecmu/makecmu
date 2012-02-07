@@ -1,3 +1,5 @@
+require 'csv'
+
 class Membership
   include Mongoid::Document
   field :name, :type => String
@@ -6,4 +8,15 @@ class Membership
   field :comments, :type => String
 
   embedded_in :project
+
+  def self.to_csv(memberships, col_sep = "")
+  	attributes = ['name', 'email', 'interests', 'comments']
+    CSV.generate(:col_sep => col_sep) do |csv|
+      csv << attributes
+      memberships.each do |membership|
+	      csv << attributes.map{ |a| membership[a] }
+	  end
+    end
+  end
+  
 end

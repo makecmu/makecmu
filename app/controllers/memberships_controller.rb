@@ -7,8 +7,9 @@ class MembershipsController < ApplicationController
     @memberships = @project.memberships
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @memberships }
+      format.csv { export_excel_csv(@project, @memberships) }
     end
   end
 
@@ -59,33 +60,14 @@ class MembershipsController < ApplicationController
     end
   end
 
-  # PUT /memberships/1
-  # PUT /memberships/1.json
-  def update
-    @project = Project.find(params[:project_id])
-    @membership = @project.memberships.find(params[:id])
+  protected
 
-    respond_to do |format|
-      if @membership.update_attributes(params[:membership])
-        format.html { redirect_to project_membership_url(@project,@membership) , notice: 'Membership was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @membership.errors, status: :unprocessable_entity }
-      end
-    end
+  # Maybe this works
+  def export_excel_csv(project, memberships)
+    date = I18n.l(Time.now, :format => :short)
+    filename =  "#{date}-#{@project.title.parameterize}-memberships.csv"
+    content = Membership.to_csv(memberships, "\t")
+    send_data content, :filename => filename
   end
 
-  # DELETE /memberships/1
-  # DELETE /memberships/1.json
-  def destroy
-    @project = Project.find(params[:project_id])
-    @membership = @project.memberships.find(params[:id])
-    @membership.destroy
-
-    respond_to do |format|
-      format.html { redirect_to project_memberships_url(@project) }
-      format.json { head :ok }
-    end
-  end
 end
