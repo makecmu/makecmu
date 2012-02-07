@@ -1,29 +1,18 @@
-<h1>Listing projects</h1>
+<%= render :partial => "home/header" %>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Author</th>
-    <th>Description</th>
-    <th>Looking for</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<section>
+  <div class="content">
+    <h1><%= image_tag "showcase.png", :alt => "Showcase" %></h1>
 
-<% @projects.each do |project| %>
-  <tr>
-    <td><%= project.title %></td>
-    <td><%= project.author %></td>
-    <td><%= project.description %></td>
-    <td><%= project.looking_for %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+    <h3><%= image_tag "view_and_join.png", :alt => "View and join existing MakeCMU projects" %></h3>
+    <%= render :partial => "home/submit_arrow" %>
 
-<br />
+    <div class="projects">
+    <%= render :partial => "home/project", :collection => @projects %>
+    </div>
 
-<%= link_to 'New Project', new_project_path %>
+    <%= paginate @projects %>
+  </div>
+</section>
+
+<%= render :partial => "home/footer" %>
