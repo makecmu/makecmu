@@ -37,12 +37,6 @@ class MembershipsController < ApplicationController
     end
   end
 
-  # GET /memberships/1/edit
-  def edit
-    @project = Project.find(params[:project_id])
-    @membership = @project.memberships.find(params[:id])
-  end
-
   # POST /memberships
   # POST /memberships.json
   def create
