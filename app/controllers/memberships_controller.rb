@@ -1,9 +1,7 @@
 class MembershipsController < ApplicationController
 
-  load_and_authorize_resource
-  
-  # GET /memberships
-  # GET /memberships.json
+  authorize_resource
+
   def index
     @project = Project.find(params[:project_id])
     @memberships = @project.memberships
