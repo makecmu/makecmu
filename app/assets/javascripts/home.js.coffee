@@ -3,7 +3,7 @@ $(document).ready ->
 	$.localScroll(duration: 500)
 
 	$('.modal').fancybox(
-		type		: 'ajax'
+		type		: 'iframe'
 		minWidth	: 800,
 		minHeight	: 600,
 		padding		: 0,
