@@ -21,8 +21,9 @@
   </div>
   <div class="field">
     <%= f.label :looking_for %><br />
-    <% 3.times do %>
-      <input name="project[looking_for][]" type="text"><br />
+    <% 0.upto(2) do |i| %>
+<%# TODO: make this less ugly %>
+      <input name="project[looking_for][]" type="text" value="<%= @project.looking_for.try(:[], i) %>"><br />
     <% end %>
   </div>
   <div class="field">
