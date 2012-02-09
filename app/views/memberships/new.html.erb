@@ -1,4 +1,8 @@
-<h2>Join <%= @project.title %></h2>
+<h1 id="next-meeting-title">Join <%= @project.title %></h1>
+
+<%= link_to @project do %>
+	<%= image_tag @project.image.thumb.url %>
+<% end %>
 
 <p>Fill out this form and we'll let the project owner know you're interested.</p>
 

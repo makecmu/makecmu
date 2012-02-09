@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :size => 30 %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :size => "30x5" %>
   </div>
   <div class="field">
     <%= f.label :looking_for %><br />
@@ -27,7 +27,7 @@
   </div>
   <div class="field">
     <%= f.label :image %><br />
-    <%= image_tag(@project.image_url) if @project.image? %><br />
+    <%= image_tag(@project.image.tiny.url, :size => "50x50") if @project.image? %>
     <%= f.file_field :image %>
     <%= f.hidden_field :image_cache %>
   </div>
