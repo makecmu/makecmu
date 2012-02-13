@@ -5,7 +5,6 @@ class Ability
     can :read, :all
     can :create, Membership
     cannot :index, Membership
-    can :new, Project
     if user
 			can :index, Membership
       can :create, Project

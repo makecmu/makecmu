@@ -1,5 +1,6 @@
-<h2>Sign in</h2>
+<h1 id="next-meeting-title">Sign In</h1>
 
+<section id="meeting-info">
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
@@ -13,5 +14,8 @@
 
   <div><%= f.submit "Sign in" %></div>
 <% end %>
+</section>
 
+<section id="supplemental-info">
 <%= render :partial => "devise/shared/links" %>
+</section>

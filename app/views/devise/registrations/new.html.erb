@@ -1,5 +1,6 @@
-<h2>Sign up</h2>
+<h1 id="next-meeting-title">Sign up</h1>
 
+<section id="meeting-info">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -14,5 +15,8 @@
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>
+</section>
 
+<section id="supplemental-info">
 <%= render :partial => "devise/shared/links" %>
+</section>
