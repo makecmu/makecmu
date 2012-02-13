@@ -9,8 +9,8 @@
 
     <div class="projects">
       <%= render :partial => "project", :collection => @projects %>
-      <% if @projects.size > 4 %>
-        <%= link_to "More Projects...", projects_path %>
+      <% if Project.count > 4 %>
+        <%= link_to "More Projects...", projects_path, :class => "more-projects-link" %>
       <% end %>
     </div>
 

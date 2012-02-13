@@ -5,7 +5,9 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.page(params[:page]).per(10)
+    # FIXME: probably atrociously slow
+    shuffled_projects = Project.has_image.all.sort_by(&:shuffled_order)[4..-1] + Project.no_image.all.sort_by(&:shuffled_order)
+    @projects = Kaminari.paginate_array(shuffled_projects).page(params[:page]).per(10)
 
     respond_to do |format|
       format.html # index.html.erb

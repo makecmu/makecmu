@@ -45,6 +45,8 @@
 
 .project-description {
     margin-top: 2em;
+    max-height: 250px;
+    overflow: hidden;
 }
 
 .long-project-description {
@@ -97,6 +99,12 @@
 
     padding: 0; // HACK: override
     min-height: 0; // HACK: override
+}
+
+.more-projects-link {
+    display: block;
+    float: right;
+    
 }
 
 #looking-for-list {
