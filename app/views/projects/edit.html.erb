@@ -2,6 +2,10 @@
 
 <%= render 'form' %>
 
+<p>
+<%= link_to 'Delete this project', project_path(@project), :method => :delete, :confirm => "Are you sure?" %>
+</p>
+
 <% if can?(:manage, @project) and @project.seeking_collaborators %>
 	<h4>Interested People <%= link_to '[CSV]', project_memberships_url(@project, :format => :csv)%></h4>
 	<table border="1">
