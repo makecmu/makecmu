@@ -18,9 +18,9 @@
 
 <section id="project-right">
 
-<p class="long-project-description">
+<div class="long-project-description">
 <%= simple_format @project.description %>
-</p>
+</div>
 
 <%= link_to "Join This Project", new_project_membership_path(@project), :class => "inset-button join-button" unless can? :manage, @project %>
 

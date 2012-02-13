@@ -13,6 +13,7 @@ gem 'kaminari', '~> 0.13.0'
 
 gem 'carrierwave', '~> 0.5.8'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'fog'
 gem 'rmagick'
 
 group :assets do
