@@ -1,9 +1,13 @@
 <h1 id="next-meeting-title">Join <%= @project.title %></h1>
 
+<section id="project-left">
 <%= link_to @project do %>
-	<%= image_tag @project.image.thumb.url %>
+	<%= image_tag @project.image.thumb.url, :class => "project-img" %>
 <% end %>
+</section>
 
-<p>Fill out this form and we'll let the project owner know you're interested.</p>
+<section id="project-right">
+<p>Fill out this form and we'll let the project organizer know you're interested.</p>
 
 <%= render 'form' %>
+</section>
