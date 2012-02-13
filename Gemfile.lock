@@ -128,6 +128,7 @@ GEM
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.3.0)
+    newrelic_rpm (3.3.1)
     nokogiri (1.5.0)
     oauth2 (0.5.2)
       faraday (~> 0.7)
@@ -226,6 +227,7 @@ DEPENDENCIES
   jquery-rails
   kaminari (~> 0.13.0)
   mongoid (~> 2.4.1)
+  newrelic_rpm
   omniauth-facebook
   rails (~> 3.1.1)
   rb-fsevent (~> 0.4.3)
