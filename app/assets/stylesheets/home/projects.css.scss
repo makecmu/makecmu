@@ -47,6 +47,12 @@
     margin-top: 2em;
 }
 
+.long-project-description {
+    min-height: 5em;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
 .project-container ul {
     list-style: none inside;
     padding: 0;
@@ -77,4 +83,40 @@
 .join-button {
     font-size: 13px;
     padding: 5px 18px;
+}
+
+#project-right .join-button {
+    float: right;
+}
+
+#project-right {
+    position: absolute;
+    right: 20px;
+    left: 250px;
+    top: 80px; bottom: 15px;
+
+    padding: 0; // HACK: override
+    min-height: 0; // HACK: override
+}
+
+#looking-for-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#project-left h5 {
+    margin-bottom: 0;
+}
+
+#project-left {
+    padding: 0 15px; // HACK
+    min-height: 0; // HACK
+
+    overflow: hidden;
+
+    position: absolute;
+    left: 0;
+    top: 90px; bottom: 15px;
+    width: 200px;
 }

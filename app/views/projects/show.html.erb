@@ -1,58 +1,27 @@
 <h1 id="next-meeting-title">
 	<%= @project.title %>
-	<%= link_to ' [Edit]', edit_project_path(@project) if can? :edit, @project %>
+	<%= link_to ' [Manage]', edit_project_path(@project) if can? :edit, @project %>
 </h1>
 
-<section id="meeting-info">
+<section id="project-left">
 
-<%= image_tag @project.image.thumb.url %>
+<%= image_tag @project.image.thumb.url, :class=>"project-img" %>
 
-<h4>Looking For:</h4>
-<ul>
+<h5>Looking For:</h5>
+<ul id="looking-for-list">
   <% @project.looking_for.each do |need| %>
   <li><%= need %></li>
   <% end %>
 </ul>
 
-<h4>Updated:</h4>
-<%= l @project.updated_at, :format => :long %>
-
 </section>
 
-<section id="supplemental-info">
+<section id="project-right">
 
-<h4>Project Owner:</h4>
-<p>
-<%= link_to @project.user.link, :target => "_blank" do %>
-	<%= image_tag @project.user.image_url %>
-	<%=@project.user.name%>
-<% end %>
-</p>
-
-<h4>Description:</h4>
-<p>
+<p class="long-project-description">
 <%= @project.description %>
 </p>
 
-<% if can? :manage, @project %>
-	<h4>Interested People <%= link_to '[CSV]', project_memberships_url(@project, :format => :csv)%></h4>
-	<table border="1">
-		<tr>
-			<th>Name</th>
-			<th>E-Mail</th>
-			<th>Interests</th>
-			<th>Comments</th>
-		</tr>		
-		<% @project.memberships.each do |membership| %>
-			<tr>
-				<td><%= membership.name %></td>
-				<td><%= membership.email %></td>
-				<td><%= membership.interests %></td>
-				<td><%= membership.comments %></td>
-			</tr>
-		<% end %>
-	</table>
-<% end %>
 <%= link_to "Join This Project", new_project_membership_path(@project), :class => "inset-button join-button" unless can? :manage, @project %>
 
 </section>
