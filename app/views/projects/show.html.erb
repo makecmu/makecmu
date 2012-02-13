@@ -7,12 +7,14 @@
 
 <%= image_tag @project.image.thumb.url, :class=>"project-img" %>
 
-<h5>Looking For:</h5>
-<ul id="looking-for-list">
-  <% @project.looking_for.each do |need| %>
-  <li><%= need %></li>
-  <% end %>
-</ul>
+<% unless @project.looking_for.all?(&:blank?) %>
+	<h5>Looking For:</h5>
+	<ul id="looking-for-list">
+	  <% @project.looking_for.each do |need| %>
+	  <li><%= need %></li>
+	  <% end %>
+	</ul>
+<% end %>
 
 </section>
 
