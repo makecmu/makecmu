@@ -20,6 +20,10 @@
     <%= f.text_area :description, :size => "30x5" %>
   </div>
   <div class="field">
+    <%= f.check_box :seeking_collaborators %>
+    <%= f.label :seeking_collaborators %>
+  </div>
+  <div class="field">
     <%= f.label :looking_for %><br />
     <% 0.upto(2) do |i| %>
 <%# TODO: make this less ugly %>
@@ -32,7 +36,6 @@
     <%= f.file_field :image %>
     <%= f.hidden_field :image_cache %>
   </div>
-  <br />
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -5,6 +5,7 @@ class Project
   field :title, :type => String
   field :description, :type => String
   field :looking_for, :type => Array
+  field :seeking_collaborators, :type => Boolean
 
   belongs_to :user
 
@@ -12,6 +13,9 @@ class Project
 
   scope :has_image, where(:image.exists => true)
   scope :no_image, where(:image.exists => false)
+
+  scope :seeking_collaborators, where(:seeking_collaborators => true)
+  scope :not_seeking_collaborators, where(:seeking_collaborators => false)
 
   mount_uploader :image, ImageUploader
 
