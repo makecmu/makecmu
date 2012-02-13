@@ -3,14 +3,18 @@
     <%= link_to project, :class => "modal" do %>
       <%= image_tag project.image.thumb.url, :alt => project.title, :class => "project-img", :width => 200, :height => 170 %>
     <% end %>
-    <% unless project.looking_for.all?(&:blank?) %>
-      <h4>Looking For:</h4>
+    <h4>
+    <% if project.looking_for.all?(&:blank?) %>
+    &nbsp;
+    <% else %>
+    Looking For:
+    <% end %>
+    </h4>
       <ul>
         <% project.looking_for.each do |need| %>
         <li><%= need %></li>
         <% end %>
       </ul>
-    <% end %>
     <%= link_to "Join This Project", new_project_membership_path(project), :class => "inset-button join-button modal" if project.seeking_collaborators %>
   </div>
 
