@@ -12,9 +12,9 @@ class ApplicationController < ActionController::Base
 	end
   end
 
-	def after_sign_in_path_for(resource)
-	    session[:login_return_path] || root_url
-	end
+	# def after_sign_in_path_for(resource)
+	#     session[:login_return_path] || root_url
+	# end
 
   protect_from_forgery
 end
