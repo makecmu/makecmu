@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
   def index
     # FIXME: probably atrociously slow
     # TODO: move into model
-    shuffled_projects = (Project.has_image.all.sort_by(&:shuffled_order)[4..-1] || []) +
+    shuffled_projects = (Project.has_image.all.sort_by(&:shuffled_order) || []) +
                         Project.no_image.all.sort_by(&:shuffled_order)
 
     @projects = Kaminari.paginate_array(shuffled_projects).page(params[:page]).per(10)
